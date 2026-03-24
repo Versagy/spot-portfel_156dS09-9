@@ -78,8 +78,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 
 .project-card { background: #fff; border: 0.5px solid #d3d1c7; border-radius: 12px; margin-bottom: 10px; overflow: hidden; transition: opacity 0.15s; }
 .project-card.dragging { opacity: 0.35; }
-.drop-indicator { display: none; height: 3px; background: #1a1a1a; border-radius: 2px; margin: -2px 8px 2px; }
-.drop-indicator-bottom { display: none; height: 3px; background: #1a1a1a; border-radius: 2px; margin: 2px 8px -2px; }
 .group-drop-zone { min-height: 40px; border-radius: 10px; border: 2px dashed transparent; transition: border-color 0.15s, background 0.15s; }
 .group-drop-zone.drag-over { border-color: #b4b2a9; background: #f5f5f3; }
 .project-header { display: flex; align-items: center; gap: 10px; padding: 12px 16px; cursor: pointer; }
@@ -183,8 +181,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         <button class="btn btn-add-project" onclick="openAddProjectModal('low')">+ Проект</button>
       </div>
       <div class="group-drop-zone" id="drop-low" ondragover="onDragOver(event,'low')" ondragleave="onDragLeave(event,'low')" ondrop="onDrop(event,'low')">
-        <div class="project-card" draggable="true" data-project-id="10" ondragstart="onDragStart(event,10)" ondragend="onDragEnd(event)" style="">
-        <div class="drop-indicator"></div>
+        <div class="project-card" draggable="true" ondragstart="onDragStart(event,10)" ondragend="onDragEnd(event)" style="">
         <div class="project-header" onclick="toggleProject(10)" style="">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">BTC</span>
@@ -359,9 +356,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="11" ondragstart="onDragStart(event,11)" ondragend="onDragEnd(event)" style="">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,11)" ondragend="onDragEnd(event)" style="">
         <div class="project-header" onclick="toggleProject(11)" style="">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">ETH</span>
@@ -460,7 +455,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
       </div>
       </div>
     </div><div class="group-section">
@@ -471,8 +465,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         <button class="btn btn-add-project" onclick="openAddProjectModal('mid')">+ Проект</button>
       </div>
       <div class="group-drop-zone" id="drop-mid" ondragover="onDragOver(event,'mid')" ondragleave="onDragLeave(event,'mid')" ondrop="onDrop(event,'mid')">
-        <div class="project-card" draggable="true" data-project-id="12" ondragstart="onDragStart(event,12)" ondragend="onDragEnd(event)" style="">
-        <div class="drop-indicator"></div>
+        <div class="project-card" draggable="true" ondragstart="onDragStart(event,12)" ondragend="onDragEnd(event)" style="">
         <div class="project-header" onclick="toggleProject(12)" style="">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">BNB</span>
@@ -571,9 +564,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="13" ondragstart="onDragStart(event,13)" ondragend="onDragEnd(event)" style="">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,13)" ondragend="onDragEnd(event)" style="">
         <div class="project-header" onclick="toggleProject(13)" style="">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">XRP</span>
@@ -672,9 +663,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="14" ondragstart="onDragStart(event,14)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,14)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(14)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">DOT</span>
@@ -735,9 +724,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="16" ondragstart="onDragStart(event,16)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,16)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(16)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">ADA</span>
@@ -817,9 +804,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="17" ondragstart="onDragStart(event,17)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,17)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(17)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">LINK</span>
@@ -918,9 +903,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="18" ondragstart="onDragStart(event,18)" ondragend="onDragEnd(event)" style="">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,18)" ondragend="onDragEnd(event)" style="">
         <div class="project-header" onclick="toggleProject(18)" style="">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">TRX</span>
@@ -1019,9 +1002,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="20" ondragstart="onDragStart(event,20)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,20)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(20)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">LTC</span>
@@ -1101,9 +1082,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="21" ondragstart="onDragStart(event,21)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,21)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(21)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">BCH</span>
@@ -1183,9 +1162,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="22" ondragstart="onDragStart(event,22)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,22)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(22)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">AVAX</span>
@@ -1246,9 +1223,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="24" ondragstart="onDragStart(event,24)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,24)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(24)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">XNO</span>
@@ -1309,9 +1284,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="25" ondragstart="onDragStart(event,25)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,25)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(25)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">UNI</span>
@@ -1372,9 +1345,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="26" ondragstart="onDragStart(event,26)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,26)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(26)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">ALGO</span>
@@ -1435,9 +1406,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="27" ondragstart="onDragStart(event,27)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,27)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(27)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">DOGE</span>
@@ -1517,9 +1486,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="28" ondragstart="onDragStart(event,28)" ondragend="onDragEnd(event)" style="">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,28)" ondragend="onDragEnd(event)" style="">
         <div class="project-header" onclick="toggleProject(28)" style="">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">SOL</span>
@@ -1618,9 +1585,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="29" ondragstart="onDragStart(event,29)" ondragend="onDragEnd(event)" style="">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,29)" ondragend="onDragEnd(event)" style="">
         <div class="project-header" onclick="toggleProject(29)" style="">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">TON</span>
@@ -1719,9 +1684,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="30" ondragstart="onDragStart(event,30)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,30)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(30)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">AAVE</span>
@@ -1820,9 +1783,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="33" ondragstart="onDragStart(event,33)" ondragend="onDragEnd(event)" style="">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,33)" ondragend="onDragEnd(event)" style="">
         <div class="project-header" onclick="toggleProject(33)" style="">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">QNT</span>
@@ -1921,9 +1882,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="36" ondragstart="onDragStart(event,36)" ondragend="onDragEnd(event)" style="">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,36)" ondragend="onDragEnd(event)" style="">
         <div class="project-header" onclick="toggleProject(36)" style="">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">XMR</span>
@@ -2022,9 +1981,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="38" ondragstart="onDragStart(event,38)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,38)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(38)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">STX</span>
@@ -2085,9 +2042,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="39" ondragstart="onDragStart(event,39)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,39)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(39)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">ENA</span>
@@ -2148,7 +2103,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
       </div>
       </div>
     </div><div class="group-section">
@@ -2159,8 +2113,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         <button class="btn btn-add-project" onclick="openAddProjectModal('high')">+ Проект</button>
       </div>
       <div class="group-drop-zone" id="drop-high" ondragover="onDragOver(event,'high')" ondragleave="onDragLeave(event,'high')" ondrop="onDrop(event,'high')">
-        <div class="project-card" draggable="true" data-project-id="31" ondragstart="onDragStart(event,31)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+        <div class="project-card" draggable="true" ondragstart="onDragStart(event,31)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(31)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">MNT</span>
@@ -2259,9 +2212,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="32" ondragstart="onDragStart(event,32)" ondragend="onDragEnd(event)" style="">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,32)" ondragend="onDragEnd(event)" style="">
         <div class="project-header" onclick="toggleProject(32)" style="">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">TAO</span>
@@ -2360,9 +2311,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="34" ondragstart="onDragStart(event,34)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,34)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(34)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">WLD</span>
@@ -2423,9 +2372,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
-      </div><div class="project-card" draggable="true" data-project-id="35" ondragstart="onDragStart(event,35)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
-        <div class="drop-indicator"></div>
+      </div><div class="project-card" draggable="true" ondragstart="onDragStart(event,35)" ondragend="onDragEnd(event)" style="border-color:#9AE6B4;">
         <div class="project-header" onclick="toggleProject(35)" style="background:#F0FFF4;">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу" onmousedown="_dragAllowed=true" onmouseup="_dragAllowed=false">⠿</span>
           <span class="project-name">AKT</span>
@@ -2486,7 +2433,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
           </table>
           
         </div>
-        <div class="drop-indicator-bottom"></div>
       </div>
       </div>
     </div></div>
@@ -2499,7 +2445,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         <h3>Депозит</h3>
         <div class="field-row">
           <label>Начальный депозит</label>
-          <input type="number" id="s-initial" placeholder="1000">
+          <input type="number" id="s-initial" placeholder="1000" value="1000">
           <span class="suffix">$</span>
         </div>
         <button class="btn primary" onclick="saveSetup()" style="width:100%;margin-top:8px">Сохранить</button>
@@ -2567,8 +2513,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         <option value="deposit">Пополнение</option>
         <option value="withdraw">Вывод</option>
       </select>
-      <input type="number" id="tx-amount" placeholder="Сумма ($)">
-      <input type="text" id="tx-note" placeholder="Комментарий (необязательно)" style="flex:1;min-width:150px">
+      <input type="number" id="tx-amount" placeholder="Сумма ($)" value="">
+      <input type="text" id="tx-note" placeholder="Комментарий (необязательно)" style="flex:1;min-width:150px" value="">
       <button class="btn primary" onclick="addTx()">Добавить</button>
     </div>
     <div class="tx-history" id="tx-history"><div class="tx-row">
@@ -2593,7 +2539,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <h3>Новый проект</h3>
     <div class="modal-field">
       <label>Название актива (тикер для Bybit: BTCUSDT)</label>
-      <input type="text" id="mp-name" placeholder="BTC, ETH, SOL..." oninput="document.getElementById('mp-dup-warn').style.display='none'">
+      <input type="text" id="mp-name" placeholder="BTC, ETH, SOL..." oninput="document.getElementById('mp-dup-warn').style.display='none'" value="">
       <div id="mp-dup-warn" style="display:none;font-size:12px;color:#9B1C1C;margin-top:4px;background:#FFF5F5;padding:6px 8px;border-radius:6px;border:0.5px solid #FCA5A5"></div>
     </div>
     <div class="modal-field">
@@ -2619,7 +2565,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     </div>
     <div class="modal-field">
       <label>Бюджет проекта ($) <span style="color:#888780;font-weight:400">— оставь пустым для автоматического</span></label>
-      <input type="number" id="mp-budget" placeholder="Авто" oninput="onMpBudgetInput()">
+      <input type="number" id="mp-budget" placeholder="Авто" oninput="onMpBudgetInput()" value="">
     </div>
     <p class="modal-note" id="mp-note"></p>
     <div class="modal-btns">
@@ -2635,15 +2581,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <h3>Редактировать закупку</h3>
     <div class="modal-field">
       <label>Дата</label>
-      <input type="date" id="eb-date">
+      <input type="date" id="eb-date" value="">
     </div>
     <div class="modal-field">
       <label>Цена закупки ($)</label>
-      <input type="number" id="eb-price" placeholder="0.00">
+      <input type="number" id="eb-price" placeholder="0.00" value="">
     </div>
     <div class="modal-field">
       <label>Сумма закупки ($)</label>
-      <input type="number" id="eb-amount" placeholder="0.00">
+      <input type="number" id="eb-amount" placeholder="0.00" value="">
     </div>
     <div class="modal-btns">
       <button class="btn primary" onclick="saveEditBought()">Сохранить</button>
@@ -2658,7 +2604,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div id="sell-info" style="font-size:13px;color:#888780;margin-bottom:1rem"></div>
     <div class="modal-field">
       <label>Цена продажи ($)</label>
-      <input type="number" id="sell-price" placeholder="0.00" oninput="updateSellPreview()">
+      <input type="number" id="sell-price" placeholder="0.00" oninput="updateSellPreview()" value="">
     </div>
     <div class="modal-field">
       <label>Продаю % от позиции</label>
@@ -3015,11 +2961,12 @@ function exchIcon(name) { return EXCHANGE_ICONS[name] || ''; }
 
 // ─── DRAG & DROP ──────────────────────────────────────
 let dragProjectId = null;
-let _dragAllowed  = false;
+let _dragAllowed  = false; // разрешаем drag только с иконки-ручки
 
 function onDragStart(e, projectId) {
   if (!_dragAllowed) { e.preventDefault(); return; }
   dragProjectId = projectId;
+  // находим карточку — это может быть сам target или его предок
   const card = e.target.closest('.project-card') || e.target;
   setTimeout(() => card.classList.add('dragging'), 0);
   e.dataTransfer.effectAllowed = 'move';
@@ -3029,87 +2976,31 @@ function onDragEnd(e) {
   _dragAllowed = false;
   const card = e.target.closest('.project-card') || e.target;
   card.classList.remove('dragging');
-  // Снимаем все индикаторы
-  document.querySelectorAll('.drop-indicator').forEach(el => el.style.display = 'none');
   ['low','mid','high'].forEach(g => document.getElementById(`drop-${g}`)?.classList.remove('drag-over'));
 }
 
 function onDragOver(e, group) {
   e.preventDefault();
   e.dataTransfer.dropEffect = 'move';
-
-  // Находим ближайшую карточку снизу курсора внутри этой группы
-  const zone = document.getElementById(`drop-${group}`);
-  if (!zone) return;
-
-  // Сбрасываем все индикаторы в этой зоне
-  zone.querySelectorAll('.drop-indicator').forEach(el => el.style.display = 'none');
-
-  const cards = [...zone.querySelectorAll('.project-card:not(.dragging)')];
-  const after = cards.find(card => {
-    const rect = card.getBoundingClientRect();
-    return e.clientY < rect.top + rect.height / 2;
-  });
-
-  if (after) {
-    const ind = after.querySelector('.drop-indicator');
-    if (ind) ind.style.display = 'block';
-  } else if (cards.length > 0) {
-    // Курсор ниже всех карточек — показываем индикатор после последней
-    const ind = cards[cards.length - 1].querySelector('.drop-indicator-bottom');
-    if (ind) ind.style.display = 'block';
-  } else {
-    zone.classList.add('drag-over');
-  }
+  document.getElementById(`drop-${group}`)?.classList.add('drag-over');
 }
 
 function onDragLeave(e, group) {
   const zone = document.getElementById(`drop-${group}`);
-  if (zone && !zone.contains(e.relatedTarget)) {
-    zone.classList.remove('drag-over');
-    zone.querySelectorAll('.drop-indicator').forEach(el => el.style.display = 'none');
-  }
+  if (zone && !zone.contains(e.relatedTarget)) zone.classList.remove('drag-over');
 }
 
 function onDrop(e, targetGroup) {
   e.preventDefault();
-  const zone = document.getElementById(`drop-${targetGroup}`);
-  zone?.classList.remove('drag-over');
-  zone?.querySelectorAll('.drop-indicator').forEach(el => el.style.display = 'none');
+  document.getElementById(`drop-${targetGroup}`)?.classList.remove('drag-over');
   if (!dragProjectId) return;
-
-  const dragP = state.projects.find(x => x.id === dragProjectId);
-  if (!dragP) { dragProjectId = null; return; }
-
-  // Найти карточку перед которой бросаем
-  const cards = [...(zone?.querySelectorAll('.project-card:not(.dragging)') || [])];
-  const afterCard = cards.find(card => {
-    const rect = card.getBoundingClientRect();
-    return e.clientY < rect.top + rect.height / 2;
-  });
-
-  const afterId = afterCard ? parseInt(afterCard.dataset.projectId) : null;
-
-  // Убираем перетаскиваемый проект из массива
-  const withoutDrag = state.projects.filter(x => x.id !== dragProjectId);
-
-  if (afterId !== null) {
-    const insertIdx = withoutDrag.findIndex(x => x.id === afterId);
-    withoutDrag.splice(insertIdx, 0, dragP);
-  } else {
-    // Вставляем в конец группы
-    const lastInGroupIdx = withoutDrag.reduce((acc, x, i) => x.group === targetGroup ? i : acc, -1);
-    withoutDrag.splice(lastInGroupIdx + 1, 0, dragP);
-  }
-
-  dragP.group = targetGroup;
-  state.projects = withoutDrag;
-
+  const p = state.projects.find(x => x.id === dragProjectId);
+  if (!p || p.group === targetGroup) { dragProjectId = null; return; }
+  p.group = targetGroup;
   ['low','mid','high'].forEach(g => {
     const actual = state.projects.filter(x => x.group === g).length;
     if (state.risk[g].count < actual) state.risk[g].count = actual;
   });
-
   dragProjectId = null;
   save(); renderPortfolio();
 }
@@ -3589,11 +3480,9 @@ function renderPortfolio() {
       })();
 
       return `<div class="project-card" draggable="true"
-        data-project-id="${p.id}"
         ondragstart="onDragStart(event,${p.id})"
         ondragend="onDragEnd(event)"
         style="${isGreenZone ? 'border-color:#9AE6B4;' : ''}">
-        <div class="drop-indicator"></div>
         <div class="project-header" onclick="toggleProject(${p.id})"
           style="${isGreenZone ? 'background:#F0FFF4;' : ''}">
           <span style="cursor:grab;color:#d3d1c7;font-size:16px;margin-right:2px" title="Перетащи в другую группу"
@@ -3643,7 +3532,6 @@ function renderPortfolio() {
           </table>
           ${sellsHtml}
         </div>
-        <div class="drop-indicator-bottom"></div>
       </div>`;
     }).join('') || `<div style="font-size:13px;color:#888780;padding:0.5rem 0">Проектов нет — добавь первый</div>`;
 
